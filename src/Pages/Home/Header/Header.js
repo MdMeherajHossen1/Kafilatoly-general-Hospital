@@ -17,11 +17,11 @@ const Header = () => {
 
                                     <NavLink to="/home" className="bg-gray-900 hover:bg-gray-700  text-white px-3 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
 
-                                    <NavLink to="service" className="text-gray-300   hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
+                                    <NavLink to="/services" className="text-gray-300   hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
 
                                     <NavLink to="/payment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Payment</NavLink>
 
-                                    <NavLink to="details" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
+                                    <NavLink to="/services" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
 
                                     <NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>
 

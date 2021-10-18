@@ -12,7 +12,7 @@ const useServices = () => {
 
 
     const handleDetails = id => {
-        history.push(`/details/${id}`)
+        history.push(`/services/${id}`)
     }
     return {
         services, handleDetails

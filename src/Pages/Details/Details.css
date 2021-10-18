@@ -1,0 +1,8 @@
+.details-bg{
+    background-image: url('https://i.ibb.co/7bF3BWX/details-1.jpg'),linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    width: 100%;
+    height: fit-content;
+}
