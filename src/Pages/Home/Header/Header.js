@@ -37,19 +37,19 @@ const Header = () => {
 
             <nav>
                 <div className="md:hidden" id="mobile-menu">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <div className="px-1 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-900">
 
-                        <NavLink to="/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
+                        <NavLink to="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
 
-                        <NavLink to="service" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
+                        <NavLink to="service" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
 
-                        <NavLink to="/payment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Payment</NavLink>
+                        <NavLink to="/payment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Payment</NavLink>
 
-                        <NavLink to="details" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
+                        <NavLink to="details" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
 
-                        <NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>
+                        <NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>
 
-                        <NavLink to="/resister" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>
+                        <NavLink to="/resister" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>
                     </div>
 
                 </div>
