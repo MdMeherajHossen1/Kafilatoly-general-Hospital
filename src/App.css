@@ -36,7 +36,22 @@
   background-color: #FF0075;
   padding: 6px 30px ;
   border-radius: 20px;
+  color: white;
+}
 
+.login-btn{
+  border: none;
+  background-color: darkblue;
+  padding: 6px 30px;
+  border-radius: 20px;
+  color: white;
+}
+.register-btn{
+  border: 1px solid darkblue;
+  
+  padding: 6px 30px;
+ 
+  
 }
 
 .service-btn:hover{

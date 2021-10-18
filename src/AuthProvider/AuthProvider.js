@@ -7,7 +7,7 @@ const AuthProvider = ({ children }) => {
     const allContext = useFirebase()
     const allServices = useServices()
     return (
-        <AuthContext.Provider value={allContext, allServices}>
+        <AuthContext.Provider value={[allContext, allServices]}>
             {children}
         </AuthContext.Provider>
     );
