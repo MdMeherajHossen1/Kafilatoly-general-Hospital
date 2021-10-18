@@ -8,6 +8,8 @@ import Header from './Pages/Home/Header/Header';
 import Details from './Pages/Details/Details';
 import Login from './Pages/Home/Login/Login'
 import Register from './Pages/Home/Register/Register';
+import Footer from './Pages/Home/Footer/Footer';
+import { NotFound } from 'http-errors';
 function App() {
   return (
     <div className="App">
@@ -30,9 +32,12 @@ function App() {
             <Route path="/services/:id">
               <Details></Details>
             </Route>
+            <Route exact path="*">
+              <NotFound></NotFound>
+            </Route>
 
           </Switch>
-
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
