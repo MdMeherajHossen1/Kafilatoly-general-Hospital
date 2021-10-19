@@ -28,15 +28,9 @@ const useFirebase = () => {
 
     // signIn google btn handler
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user)
-            })
-            .catch(error => {
-                setError(error.message)
-                setError(error.email)
-                setError(error.code)
-            })
+        return signInWithPopup(auth, googleProvider)
+
+
     }
 
     // handleUserLogin
@@ -68,7 +62,7 @@ const useFirebase = () => {
 
     // user observer
     useEffect(() => {
-        onAuthStateChanged(auth, user => {
+        const unSubscriber = onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user)
             }
@@ -76,6 +70,7 @@ const useFirebase = () => {
                 setUser({})
             }
         })
+        return () => unSubscriber
     }, [])
 
     // signOut handler

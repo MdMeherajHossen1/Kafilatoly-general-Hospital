@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth'
+
 const Header = () => {
+    const { user, handleSignOut } = useAuth()
     return (
 
         <>
@@ -13,19 +16,24 @@ const Header = () => {
                                 <h5 className="text-white ml-2">Kafilatoly General Hospital</h5>
                             </div>
                             <div className="hidden md:block">
-                                <div className="ml-40 flex items-baseline space-x-4">
+                                <div className="ml-24 flex items-baseline space-x-4">
 
-                                    <NavLink to="/home" className="bg-gray-900 hover:bg-gray-700  text-white px-3 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
+                                    <NavLink to="/home" className="bg-gray-900 hover:bg-gray-700  text-white px-2 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
 
-                                    <NavLink to="/services" className="text-gray-300   hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
+                                    <NavLink to="/services" className="text-gray-300   hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
 
-                                    <NavLink to="/payment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Payment</NavLink>
+                                    <NavLink to="/appoinment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Appoinment</NavLink>
 
-                                    <NavLink to="/services" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
+                                    <NavLink to="/services/:id" className="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
 
-                                    <NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>
+                                    {
+                                        user.email ? [[<p className="text-white ml-2"><small>{user.displayName}</small></p>, <img src={user.photoURL} className="h-8 w-8 rounded-full m-auto" alt="" />], <button onClick={handleSignOut} className="login-btn" >Sign Out</button>]
 
-                                    <NavLink to="/resister" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>
+                                            :
+                                            [<NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>,
+
+                                            <NavLink to="/register" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>]
+                                    }
                                 </div>
                             </div>
                         </div>

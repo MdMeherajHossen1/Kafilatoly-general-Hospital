@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase'
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth'
 const Login = () => {
     const { handleGoogleSignIn, error,
         handleEmailChange, handlePasswordChange, handleUserLogin,
-    } = useFirebase()
-
+    } = useAuth()
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_uri = location.state?.from || '/home';
+    const signInGoogle = () => {
+        handleGoogleSignIn()
+            .then(result => {
+                history.push(redirect_uri)
+            })
+    }
 
 
     return (
@@ -30,7 +38,7 @@ const Login = () => {
 
                 </div>
                 <div className="text-purple-900">-----------Or----------</div>
-                <button className="service-btn" onClick={handleGoogleSignIn}>SignIn with Google</button>
+                <button className="service-btn" onClick={signInGoogle}>SignIn with Google</button>
             </div>
             <div className="col">
                 <img src={'https://i.ibb.co/PzwQNj8/4673526.jpg'} alt="" />
