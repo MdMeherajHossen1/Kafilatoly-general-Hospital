@@ -20,14 +20,14 @@ const Header = () => {
 
                                     <NavLink to="/home" className="bg-gray-900 hover:bg-gray-700  text-white px-2 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
 
-                                    <NavLink to="/services" className="text-gray-300   hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
+                                    <NavLink to="/doctors" className="text-gray-300   hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Doctors</NavLink>
 
                                     <NavLink to="/appoinment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Appoinment</NavLink>
 
                                     <NavLink to="/services/:id" className="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
 
                                     {
-                                        user.email ? [[<p className="text-white ml-2"><small>{user.displayName}</small></p>, <img src={user.photoURL} className="h-8 w-8 rounded-full m-auto" alt="" />], <button onClick={handleSignOut} className="login-btn" >Sign Out</button>]
+                                        user.email ? [[<p className="text-white ml-2"><small>{user.displayName}</small></p>, <img src={user.photoURL} className="h-8 w-8 rounded-full m-auto" alt="" />], <button onClick={handleSignOut} className="login-btn" >Sign Out <i class="fas fa-sign-out-alt"></i></button>]
 
                                             :
                                             [<NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>,

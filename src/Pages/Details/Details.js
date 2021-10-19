@@ -5,8 +5,8 @@ import useServices from '../../hooks/useServices'
 
 const Details = () => {
     const { id } = useParams()
-    const { services } = useServices()
-    console.log(services)
+    const { services, handleAppoinment } = useServices()
+
     const seletedService = services?.filter(service => service.id === id)
 
     return (
@@ -20,7 +20,7 @@ const Details = () => {
                     <img src={seletedService[0]?.img} className="" alt="" />
                 </div>
                 <div className="col ">
-                    <button className="service-btn">Make an Appoinment</button>
+                    <button onClick={() => handleAppoinment(seletedService[0])} className="service-btn">Make an Appoinment</button>
                 </div>
             </div>
         </div>

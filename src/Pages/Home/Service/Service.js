@@ -6,12 +6,12 @@ const Service = ({ service, handleDetails }) => {
     return (
         <div>
             <div className="col">
-                <div className="bg-green-900  p-2 rounded shadow-lg text-white">
+                <div className="bg-gray-900  p-2 rounded shadow-lg text-white">
                     <img src={img} className="w-full h-52 rounded" alt="" />
                     <div>
                         <h4 className="pt-2 text-pink-700"> {name}</h4>
                         <p className="text-left ">Description: {desc.slice(0, 260).toLowerCase()}</p>
-                        <button onClick={() => handleDetails(id)} className="service-btn w-full">DETAILS</button>
+                        <button onClick={() => handleDetails(id)} className="service-btn w-full">DETAILS <i class="fas fa-info-circle"></i></button>
                     </div>
                 </div>
             </div>

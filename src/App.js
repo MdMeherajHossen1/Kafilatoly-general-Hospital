@@ -11,6 +11,8 @@ import Register from './Pages/Home/Register/Register';
 import Footer from './Pages/Home/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound'
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Appionment from './Pages/Appionment/Appionment';
+import Doctors from './Pages/Doctors/Doctors';
 function App() {
   return (
     <div className="App">
@@ -21,17 +23,23 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route exact path="/register">
               <Register></Register>
             </Route>
-            <Route exact path="/home">
-              <Home></Home>
-            </Route>
+            <PrivateRoute path="/doctors">
+              <Doctors></Doctors>
+            </PrivateRoute>
             <PrivateRoute path="/services/:id">
               <Details></Details>
+            </PrivateRoute>
+            <PrivateRoute path="/appoinment">
+              <Appionment></Appionment>
             </PrivateRoute>
             <Route exact path="*">
               <NotFound></NotFound>

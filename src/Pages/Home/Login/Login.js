@@ -29,16 +29,16 @@ const Login = () => {
                         onChange={handlePasswordChange} className=" block border-b-2 outline-none w-full py-2  border-indigo-600  " type="password" placeholder="Type your Password" />
 
 
-                    <button onClick={handleUserLogin} className="login-btn w-full mt-3 mb-1" >Log In</button>
+                    <button onClick={handleUserLogin} className="login-btn w-full mt-3 mb-1" > <i class="fas fa-sign-in-alt"></i> Log In</button>
 
 
 
                     <p>New user ?</p>
-                    <Link to="/register"><button className="register-btn w-full my-1" > Create Your Account </button></Link>
+                    <Link to="/register"><button className="register-btn w-full my-1" > <i class="far fa-registered"></i> Create Your Account </button></Link>
 
                 </div>
                 <div className="text-purple-900">-----------Or----------</div>
-                <button className="service-btn" onClick={signInGoogle}>SignIn with Google</button>
+                <button className="service-btn" onClick={signInGoogle}> <i class="fab fa-google text-red-700"></i> SignIn with Google</button>
             </div>
             <div className="col">
                 <img src={'https://i.ibb.co/PzwQNj8/4673526.jpg'} alt="" />
