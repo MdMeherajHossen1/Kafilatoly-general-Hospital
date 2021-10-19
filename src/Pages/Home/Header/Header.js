@@ -13,7 +13,7 @@ const Header = () => {
                         <div className="flex items-center">
                             <div className="flex items-center justify-between ">
                                 <img className="h-8 w-8 rounded-full" src="https://i.ibb.co/f2kvLcw/preview.png" alt="Workflow" />
-                                <h5 className="text-white ml-2">Kafilatoly General Hospital</h5>
+                                <h5 className="text-white ml-2">KAFILATOLY GENERAL HOSPITAL</h5>
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-24 flex items-baseline space-x-4">
@@ -47,17 +47,22 @@ const Header = () => {
                 <div className="md:hidden" id="mobile-menu">
                     <div className="px-1 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-900">
 
-                        <NavLink to="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
+                        <NavLink to="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline" aria-current="page">Home</NavLink>
 
-                        <NavLink to="service" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Service</NavLink>
+                        <NavLink to="/doctors" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Doctors</NavLink>
 
-                        <NavLink to="/payment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Payment</NavLink>
+                        <NavLink to="/appoinment" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Appoinment</NavLink>
 
-                        <NavLink to="details" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
+                        <NavLink to="/services/:id" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Details</NavLink>
 
-                        <NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>
+                        {
+                            user.email ? [[<p className="text-white ml-2"><small>{user.displayName}</small></p>, <img src={user.photoURL} className="h-8 w-8 rounded-full m-auto" alt="" />], <button onClick={handleSignOut} className="login-btn" >Sign Out <i class="fas fa-sign-out-alt"></i></button>]
 
-                        <NavLink to="/resister" className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>
+                                :
+                                [<NavLink to="/login" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Login</NavLink>,
+
+                                <NavLink to="/register" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">Register</NavLink>]
+                        }
                     </div>
 
                 </div>
