@@ -7,11 +7,19 @@ const useServices = () => {
     const [doctors, setDoctors] = useState([])
     const history = useHistory()
     useEffect(() => {
-        fetch('/services.json')
+        fetch('https://peaceful-brook-76175.herokuapp.com/doctors')
             .then(res => res.json())
             .then(data => {
-                setServices(data.services)
-                setDoctors(data.doctors)
+
+                setDoctors(data)
+            })
+    }, [])
+    useEffect(() => {
+        fetch('https://peaceful-brook-76175.herokuapp.com/services')
+            .then(res => res.json())
+            .then(data => {
+
+                setServices(data)
             })
     }, [])
 
